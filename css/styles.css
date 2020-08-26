@@ -94,3 +94,19 @@ footer p {
     font-weight: normal;
     font-size: 13px;
 }
+.block {
+    display: none;
+}
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: gray;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
