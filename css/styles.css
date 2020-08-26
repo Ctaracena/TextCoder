@@ -50,6 +50,7 @@ p {
     display: flex;
     justify-content: center;
 }
+.reload,
 .convert,
 .decodificar {
     margin: 10px;
@@ -73,6 +74,11 @@ p {
 .codificado {
     padding: 5px 10px;
     color: black;
+}
+.reload-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 footer {

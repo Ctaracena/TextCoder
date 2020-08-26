@@ -2,6 +2,7 @@ const convert = document.querySelector('.convert');
 const decodificar = document.querySelector('.decodificar');
 const msg = document.querySelector('.msg').valueOf();
 const codificado = document.querySelector('.codificado');
+const reload = document.querySelector('.reload');
 
 convert.addEventListener('click', () => {
     let message = msg.value.toLowerCase();
@@ -18,52 +19,52 @@ convert.addEventListener('click', () => {
                 convertedArr.push('1');
             break
             case 'b':
-                convertedArr.push('2');
-            break
-            case 'c': 
-                convertedArr.push('3');
-            break
-            case 'd':
-                convertedArr.push('4');
-            break
-            case 'e': 
-                convertedArr.push('5');
-            break
-            case 'f':
-                convertedArr.push('6');
-            break
-            case 'g': 
-                convertedArr.push('7');
-            break
-            case 'h':
-                convertedArr.push('8');
-            break
-            case 'i':
-                convertedArr.push('9')
-            break
-            case 'j': 
                 convertedArr.push('!');
             break
-            case 'k':
+            case 'c': 
+                convertedArr.push('2');
+            break
+            case 'd':
                 convertedArr.push('"');
             break
-            case 'l': 
+            case 'e': 
+                convertedArr.push('3');
+            break
+            case 'f':
                 convertedArr.push('·');
             break
-            case 'm':
+            case 'g': 
+                convertedArr.push('4');
+            break
+            case 'h':
                 convertedArr.push('$');
             break
-            case 'n': 
+            case 'i':
+                convertedArr.push('5')
+            break
+            case 'j': 
                 convertedArr.push('%');
             break
-            case 'ñ':
+            case 'k':
+                convertedArr.push('6');
+            break
+            case 'l': 
                 convertedArr.push('&');
             break
-            case 'o': 
+            case 'm':
+                convertedArr.push('7');
+            break
+            case 'n': 
                 convertedArr.push('/');
             break
-            case 'p':
+            case 'ñ':
+                convertedArr.push('8');
+            break
+            case 'o': 
                 convertedArr.push('(');
+            break
+            case 'p':
+                convertedArr.push('9');
             break
             case 'q':
                 convertedArr.push(')');
@@ -117,52 +118,52 @@ decodificar.addEventListener('click', () => {
             case '1': 
                 convertedArr.push('a');
             break
-            case '2':
+            case '!':
                 convertedArr.push('b');
             break
-            case '3': 
+            case '2': 
                 convertedArr.push('c');
             break
-            case '4':
+            case '"':
                 convertedArr.push('d');
             break
-            case '5': 
+            case '3': 
                 convertedArr.push('e');
             break
-            case '6':
+            case '·':
                 convertedArr.push('f');
             break
-            case '7': 
+            case '4': 
                 convertedArr.push('g');
             break
-            case '8':
+            case '$':
                 convertedArr.push('h');
             break
-            case '9':
+            case '5':
                 convertedArr.push('i')
             break
-            case '!': 
+            case '%': 
                 convertedArr.push('j');
             break
-            case '"':
+            case '6':
                 convertedArr.push('k');
             break
-            case '·': 
+            case '&': 
                 convertedArr.push('l');
             break
-            case '$':
+            case '7':
                 convertedArr.push('m');
             break
-            case '%': 
+            case '/': 
                 convertedArr.push('n');
             break
-            case '&':
+            case '8':
                 convertedArr.push('ñ');
             break
-            case '/': 
+            case '(': 
                 convertedArr.push('o');
             break
-            case '(':
+            case '9':
                 convertedArr.push('p');
             break
             case ')':
@@ -201,3 +202,6 @@ decodificar.addEventListener('click', () => {
     codificado.innerHTML = stringCode;
 })
 
+reload.addEventListener('click', () => {
+    location.reload();
+})
