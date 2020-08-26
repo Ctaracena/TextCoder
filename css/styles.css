@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400;700&family=Libre+Barcode+39+Text&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Encode Sans', sans-serif;
+    background-image: url(../images/pexels-markus-spiske-1089438.jpg);
+    background-position: right;
+}
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
+}
+.main {
+    max-width: 800px;
+    margin: auto;
+    padding: 15px;
+    padding-top: 0;
+}
+.title {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    text-align: center;
+    font-size: 2.2rem;
+    padding-top: 10px;
+    background-color: white;
+    width: 100%;
+    padding: 15px 0;
+}
+p {
+    font-size: 18px;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+.msg-wrapper {
+    width: 90%;
+    margin: 10px auto;
+    height: 100px;
+}
+.msg {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: start;
+    font-family: 'Encode Sans', sans-serif;
+    padding: 5px 10px;
+}
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.convert,
+.decodificar {
+    margin: 10px;
+    width: 120px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid white;
+    background-color: rgb(19, 19, 19);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.result {
+    width: 90%;
+    margin: 30px auto;
+    height: 300px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 3px;
+}
+.codificado {
+    padding: 5px 10px;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(19, 19, 19);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer p {
+    font-weight: normal;
+    font-size: 13px;
+}
