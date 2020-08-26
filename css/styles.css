@@ -5,6 +5,7 @@ body {
     font-family: 'Encode Sans', sans-serif;
     background-image: url(../images/pexels-markus-spiske-1089438.jpg);
     background-position: right;
+    height: auto;
 }
 header {
     width: 100%;
@@ -50,6 +51,7 @@ p {
     display: flex;
     justify-content: center;
 }
+.enter,
 .reload,
 .convert,
 .decodificar {
@@ -109,4 +111,33 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.authorized {
+    border: 1px solid black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.authorized h2 {
+    margin: 3px 8px; 
+}
+.authorized p {
+    padding: 5px;
+}
+.password {
+    padding: 5px;
+    outline: none;
+}
+.enter {
+    outline: none;
+}
+@media screen and (max-width: 600px) {
+    .layer h1 {
+        font-size: 24px;
+    }
+    .layer h3 {
+        font-size: 16px;
+    }
 }

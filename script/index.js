@@ -3,20 +3,28 @@ const decodificar = document.querySelector('.decodificar');
 const msg = document.querySelector('.msg').valueOf();
 const codificado = document.querySelector('.codificado');
 const reload = document.querySelector('.reload');
-
 const block = document.querySelector('.block');
+const password = document.querySelector('.password');
+const enter= document.querySelector('.enter');
+
+let date = new Date();
+let hour = date.getHours();
 
 function blockLayer() {
     block.classList = 'layer';
 } 
 
-let date = new Date();
-let hour = date.getHours();
-
+enter.addEventListener('click', () => {
+    if (password.value == 'holaAle') {
+        block.classList.remove('layer');
+    } else {
+        password.value = '';
+    }
+})
 
 convert.addEventListener('click', () => {
     if (hour > 8 && hour < 14) {
-        block.classList = 'layer';
+        block.classList.add('layer');
     }
     let message = msg.value.toLowerCase();
     let msgArr = Array.from(message)
@@ -162,7 +170,7 @@ convert.addEventListener('click', () => {
 
 decodificar.addEventListener('click', () => {
     if (hour > 8 && hour < 14) {
-        block.classList = 'layer';
+        block.classList.add('layer');
     }
     let message = msg.value;
     let msgArr = Array.from(message)
