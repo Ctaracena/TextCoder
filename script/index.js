@@ -23,7 +23,7 @@ enter.addEventListener('click', () => {
 })
 
 convert.addEventListener('click', () => {
-    if (hour > 8 && hour < 14) {
+    if (hour >= 8 && hour < 14) {
         block.classList.add('layer');
     }
     let message = msg.value.toLowerCase();
@@ -169,7 +169,7 @@ convert.addEventListener('click', () => {
 })
 
 decodificar.addEventListener('click', () => {
-    if (hour > 8 && hour < 14) {
+    if (hour >= 8 && hour < 14) {
         block.classList.add('layer');
     }
     let message = msg.value;
