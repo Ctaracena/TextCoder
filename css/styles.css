@@ -100,7 +100,7 @@ footer p {
     display: none;
 }
 .layer {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -111,6 +111,7 @@ footer p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 .authorized {
     border: 1px solid black;
