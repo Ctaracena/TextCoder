@@ -1,32 +1,46 @@
+const msg = document.querySelector('.msg').valueOf();
 const convert = document.querySelector('.convert');
 const decodificar = document.querySelector('.decodificar');
-const msg = document.querySelector('.msg').valueOf();
 const codificado = document.querySelector('.codificado');
 const reload = document.querySelector('.reload');
 const block = document.querySelector('.block');
 const password = document.querySelector('.password');
-const enter= document.querySelector('.enter');
+const passwordEnter= document.querySelector('.password-enter');
+const enter = document.querySelector('.enter');
+const welcome = document.querySelector('.welcome');
+const result = document.querySelector('.result');
+
+
+
+
+
+
 
 let date = new Date();
 let hour = date.getHours();
 
-function blockLayer() {
-    block.classList = 'layer';
-} 
-
+// pantalla de entrada con verificación de horario escolar
 enter.addEventListener('click', () => {
-    if (password.value == 'holaAle') {
-        block.classList.remove('layer');
-    } else {
-        password.value = '';
-    }
-})
-
-convert.addEventListener('click', () => {
+    welcome.style.display = 'none';
     if (hour >= 8 && hour < 14) {
         block.classList.add('layer');
     }
-    let message = msg.value.toLowerCase();
+})
+
+//validación de contraseña de usuario autorizado
+passwordEnter.addEventListener('click', () => {
+    if (password.value == 'holaAle') {
+        block.classList.remove('layer');
+    } else {
+        passwordEnter.value = '';
+    }
+})
+
+
+//codificación de mensaje normal a encriptado
+convert.addEventListener('click', () => {
+    if (msg.value != '') {
+        let message = msg.value.toLowerCase();
     let msgArr = Array.from(message)
     let convertedArr = []
     for (i = 0; i < msgArr.length; i++) {
@@ -166,13 +180,13 @@ convert.addEventListener('click', () => {
     let coded = convertedArr.join('');
     codificado.innerHTML = coded;
     msg.value = '';
+    }
 })
 
+//decodificación de mensaje encriptado a normal
 decodificar.addEventListener('click', () => {
-    if (hour >= 8 && hour < 14) {
-        block.classList.add('layer');
-    }
-    let message = msg.value;
+    if (msg.value != '') {
+        let message = msg.value;
     let msgArr = Array.from(message)
     let convertedArr = []
     for (i = 0; i < msgArr.length; i++) {
@@ -311,8 +325,11 @@ decodificar.addEventListener('click', () => {
     let stringCode = convertedArr.join('');
     codificado.innerHTML = stringCode;
     msg.value = '';
+    }
+    
 })
 
 reload.addEventListener('click', () => {
-    location.reload();
+    codificado.innerHTML = '';
+    msg.value = '';
 })
