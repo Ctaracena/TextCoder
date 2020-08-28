@@ -32,18 +32,22 @@ passwordEnter.addEventListener('click', () => {
     if (password.value == 'holaAle') {
         block.classList.remove('layer');
     } else {
-        passwordEnter.value = '';
+        password.value = '';
+        console.log('contraseña erronea')
     }
 })
 
 
 //codificación de mensaje normal a encriptado
 convert.addEventListener('click', () => {
+    setTimeout(() => {
+        location.reload();
+    }, 1600000)
     if (msg.value != '') {
         let message = msg.value.toLowerCase();
-    let msgArr = Array.from(message)
-    let convertedArr = []
-    for (i = 0; i < msgArr.length; i++) {
+        let msgArr = Array.from(message)
+        let convertedArr = []
+        for (i = 0; i < msgArr.length; i++) {
         switch (msgArr[i]) {
             case ' ':
                 convertedArr.push(' ');
@@ -176,15 +180,19 @@ convert.addEventListener('click', () => {
             break
         }
         
+        }
+        let coded = convertedArr.join('');
+        codificado.innerHTML = coded;
+        msg.value = '';
     }
-    let coded = convertedArr.join('');
-    codificado.innerHTML = coded;
-    msg.value = '';
-    }
+
 })
 
 //decodificación de mensaje encriptado a normal
 decodificar.addEventListener('click', () => {
+    setTimeout(() => {
+        location.reload();
+    }, 1600000)
     if (msg.value != '') {
         let message = msg.value;
     let msgArr = Array.from(message)
